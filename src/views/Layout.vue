@@ -1,13 +1,12 @@
 <template>
-  <div id="app">
-    <!-- 根路由出口 -->
+  <div class="Layout-container">
     <router-view />
   </div>
 </template>
 
 <script>
 export default {
-  name: 'App'
+  name: 'Layout'
 }
 </script>
 
