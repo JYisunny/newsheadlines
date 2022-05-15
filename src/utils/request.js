@@ -10,14 +10,15 @@ instance.interceptors.request.use(config => {
 })
 
 instance.interceptors.response.use(res => {
-  const { reason, result } = res.data
-  // error_code ===0 请求成功
-  if (reason === 'success') {
-    return result
-  } else {
-    // 请求错误将原因提示出来
-    return Promise.reject(new Error('请求失败'))
-  }
+  return res.data.result
+  // const { reason, result } = res.data
+  // // error_code ===0 请求成功
+  // if (reason === 'success') {
+  //   return result
+  // } else {
+  //   // 请求错误将原因提示出来
+  //   return Promise.reject(new Error('请求失败'))
+  // }
 })
 
 // 请求工具函数
